@@ -4,13 +4,16 @@ ja_icon="あ"
 us_icon="U.S."
 
 main() {
-  local _input=$(echo $(defaults read com.apple.HIToolbox AppleSelectedInputSources  | xargs) | tr "[:upper:]" "[:lower:]")
+  local _input
+  _input=$(defaults read com.apple.HIToolbox AppleSelectedInputSources | tr "[:upper:]" "[:lower:]")
 
   case $_input in
     *japanese*)
-      printf "$ja_icon";;
+      printf '%s' "$ja_icon"
+      ;;
     *)
-      printf "$us_icon";;
+      printf '%s' "$us_icon"
+      ;;
   esac
 }
 
