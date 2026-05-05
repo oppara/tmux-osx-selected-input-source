@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-ja_icon="あ"
-us_icon="U.S."
+ja_icon="⦿ "
+us_icon="★ "
 
 main() {
   local _input
